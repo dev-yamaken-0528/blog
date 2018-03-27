@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<article>
+
+  <header>
+    <span>{{ .Date }}</span>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <div>
+    <p>{{ .Content }}</p>
+  </div>
+
+</article>
+{{ partial "footer.html" . }}
