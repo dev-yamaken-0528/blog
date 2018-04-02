@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+<article>
+<div>
+  {{ range (.Paginator 10).Pages }}
+    {{ .Render "list" }}
+  {{ end }}
+</div>
+</article>
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+  <nav>
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}">prev</a>
+    {{ end }}
+    <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}">next</a>
+    {{ end }}
+  </nav>
+{{ end }}
+{{ partial "footer.html" . }}
