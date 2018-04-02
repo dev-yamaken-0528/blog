@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <article>
 <div>
-  {{ range (.Paginator 10).Pages }}
+  {{ range (.Paginator 20).Pages }}
     {{ .Render "list" }}
   {{ end }}
 </div>
@@ -11,7 +11,7 @@
     {{ if .Paginator.HasPrev }}
     <a href="{{ .Paginator.Prev.URL }}">prev</a>
     {{ end }}
-    <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    <span> {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} </span>
     {{ if .Paginator.HasNext }}
     <a href="{{ .Paginator.Next.URL }}">next</a>
     {{ end }}

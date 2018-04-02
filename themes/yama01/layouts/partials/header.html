@@ -3,12 +3,19 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <title>mytheme01</title>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/lit.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/util.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
 </head>
 <body>
  
+<div class="c">
+
 <header>
-  <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  <div class="row pv2 bg-black">
+    <!-- <img src="{{ .Site.BaseURL }}/img/img.jpg" alt=""> -->
+    <b class="col"><a class="white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></b>
+  </div>
 </header>
 
 <main>
