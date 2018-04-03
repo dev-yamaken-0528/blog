@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on my blog</title>
+    <title>Tags on y memo</title>
     <link>http://153.126.205.190:49152/tags/</link>
-    <description>Recent content in Tags on my blog</description>
+    <description>Recent content in Tags on y memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Tue, 27 Mar 2018 14:59:59 +0900</lastBuildDate>
     
 	<atom:link href="http://153.126.205.190:49152/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aa</title>
+      <link>http://153.126.205.190:49152/tags/aa/</link>
+      <pubDate>Tue, 27 Mar 2018 14:59:59 +0900</pubDate>
+      
+      <guid>http://153.126.205.190:49152/tags/aa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bb</title>
+      <link>http://153.126.205.190:49152/tags/bb/</link>
+      <pubDate>Tue, 27 Mar 2018 14:59:59 +0900</pubDate>
+      
+      <guid>http://153.126.205.190:49152/tags/bb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cc</title>
+      <link>http://153.126.205.190:49152/tags/cc/</link>
+      <pubDate>Tue, 27 Mar 2018 14:59:59 +0900</pubDate>
+      
+      <guid>http://153.126.205.190:49152/tags/cc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dd</title>
+      <link>http://153.126.205.190:49152/tags/dd/</link>
+      <pubDate>Tue, 27 Mar 2018 14:59:59 +0900</pubDate>
+      
+      <guid>http://153.126.205.190:49152/tags/dd/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

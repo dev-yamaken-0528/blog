@@ -1,5 +1,8 @@
 <div class="card">
-  <a href="{{ .Permalink }}"></a>
-  <p>{{ .Title }}</p>
-  <p>{{ .Date.Format "jan 01, 2006" }}</p>
+  <a href="{{ .Permalink }}">
+    <div>
+      <p>{{ .Title }}</p>
+      <p>{{ .Date.Format "jan 01, 2006" }}</p>
+    </div>
+  </a>
 </div>

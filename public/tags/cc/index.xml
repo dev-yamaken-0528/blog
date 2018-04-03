@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on y memo</title>
-    <link>http://153.126.205.190:49152/post/</link>
-    <description>Recent content in Posts on y memo</description>
+    <title>Cc on y memo</title>
+    <link>http://153.126.205.190:49152/tags/cc/</link>
+    <description>Recent content in Cc on y memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 27 Mar 2018 14:59:59 +0900</lastBuildDate>
     
-	<atom:link href="http://153.126.205.190:49152/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://153.126.205.190:49152/tags/cc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -36,25 +36,6 @@
       
       <guid>http://153.126.205.190:49152/post/05/</guid>
       <description>hello 05</description>
-    </item>
-    
-    <item>
-      <title>02</title>
-      <link>http://153.126.205.190:49152/post/02/</link>
-      <pubDate>Tue, 27 Mar 2018 14:59:58 +0900</pubDate>
-      
-      <guid>http://153.126.205.190:49152/post/02/</guid>
-      <description>hello 02</description>
-    </item>
-    
-    <item>
-      <title>あああああ</title>
-      <link>http://153.126.205.190:49152/post/01/</link>
-      <pubDate>Tue, 27 Mar 2018 14:58:39 +0900</pubDate>
-      
-      <guid>http://153.126.205.190:49152/post/01/</guid>
-      <description>あいうえお
-あいうえお</description>
     </item>
     
   </channel>

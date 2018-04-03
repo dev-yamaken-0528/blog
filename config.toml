@@ -1,3 +1,7 @@
 baseURL = "http://153.126.205.190:49152/"
 languageCode = "ja"
-title = "my blog"
+title = "y memo"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
