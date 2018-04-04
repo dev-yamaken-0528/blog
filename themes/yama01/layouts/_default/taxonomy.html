@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
+  <ul>
   {{ range .Data.Pages }}
-    <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    <li><a class="" href="{{ .Permalink }}">{{ .Title }}</a></li>
   {{ end }}
+  </ul>
 {{ partial "footer.html" . }}

@@ -1,32 +1,9 @@
-/*
-.container{
+.article-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.box{
-  width: 300px;
-  height: 100px;
-  border: solid 1px;
+.card{
   margin-bottom: 20px;
-  box-shadow: 2px 2px 4px gray;
-  border-radius: 5px 5px 5px 5px;
-
 }
-*/
-/*
-.anim{
-  animation: animScale 2s ease-out;
-  transform-origin: 50% 50%;
-  animation-play-state:running;
-}
-@keyframes animScale {
-0% { transform: scale(0.8, 0.8); }
-5% { transform: scale(1.2, 1.2); }
-10% { transform: scale(1, 1); }
-15% { transform: scale(1.1, 1.1); }
-20% { transform: scale(1, 1); }
-100% { transform: scale(1, 1); }
-}
-*/

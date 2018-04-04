@@ -3,25 +3,28 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <title>{{ .Site.Title }}</title>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/lit.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/util.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
 </head>
 <body>
- 
-<div class="c">
+
+<div class="container bg-light">
 
 <header>
-  <div class="row pv2 bg-black">
-    <!-- <img src="{{ .Site.BaseURL }}/img/img.jpg" alt=""> -->
-    <b class="col"><a class="white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></b>
+
+  <div class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   </div>
-  
+
+  </br>
+
   <div>
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-      <a href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+      <a class="btn btn-outline-dark" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
     {{ end }}
   </div>
+
+  </br>
 
 </header>
 

@@ -1,8 +1,9 @@
-<div class="card">
+<div class="card" style="width: 15rem;">
   <a href="{{ .Permalink }}">
-    <div>
-      <p>{{ .Title }}</p>
-      <p>{{ .Date.Format "jan 01, 2006" }}</p>
+    <img class="card-img-top" src="{{ .Site.BaseURL }}/img/img.jpg" alt="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{ .Title }}</h5>
+      <p class="card-text">{{ .Date.Format "jan 01, 2006" }}</p>
     </div>
   </a>
 </div>
