@@ -1,20 +1,29 @@
 {{ partial "header.html" . }}
+
 <article>
-<div class="article-container">
-  {{ range (.Paginator 10).Pages }}
-    {{ .Render "list" }}
-  {{ end }}
-</div>
+  <div class="row">
+    {{ range (.Paginator 6).Pages }}
+      {{ .Render "list" }}
+    {{ end }}
+  </div>
 </article>
+
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-  <nav>
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
     {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}">prev</a>
+    <li class="page-item"><a class="page-link" href="{{ .Paginator.Prev.URL }}">Prev</a></li>
     {{ end }}
-    <span> {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} </span>
+
+    <li class="page-item"><span class="page-link">{{ .Paginator.PageNumber }}</span></li>
+    <!-- <li class="page-item"><span class="page-link">{{ .Paginator.TotalPages }}</span></li> -->
+
     {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}">next</a>
+    <li class="page-item"><a class="page-link" href="{{ .Paginator.Next.URL }}">Next</a></li>
     {{ end }}
-  </nav>
+  </ul>
+</nav>
 {{ end }}
+
+
 {{ partial "footer.html" . }}
