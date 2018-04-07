@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
 <article>
-  <div>
-    <span>{{ .Date }}</span>
-    <h1>{{ .Title }}</h1>
-  </div>
 
   <div>
-    <p>{{ .Content }}</p>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Date }}</p>
+    <p>{{ .Params.tags }}</p>
   </div>
+
+  <div>{{ .Content }}</div>
 
 </article>
 {{ partial "footer.html" . }}

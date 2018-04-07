@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
 
 <article>
-  <div class="row">
-    {{ range (.Paginator 6).Pages }}
+  <div>
+    {{ range (.Paginator 10).Pages }}
       {{ .Render "list" }}
     {{ end }}
   </div>
@@ -14,10 +14,6 @@
     {{ if .Paginator.HasPrev }}
     <li class="page-item"><a class="page-link" href="{{ .Paginator.Prev.URL }}">Prev</a></li>
     {{ end }}
-
-    <li class="page-item"><span class="page-link">{{ .Paginator.PageNumber }}</span></li>
-    <!-- <li class="page-item"><span class="page-link">{{ .Paginator.TotalPages }}</span></li> -->
-
     {{ if .Paginator.HasNext }}
     <li class="page-item"><a class="page-link" href="{{ .Paginator.Next.URL }}">Next</a></li>
     {{ end }}

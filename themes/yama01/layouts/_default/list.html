@@ -1,11 +1,12 @@
-<div class="col-md-4">
-  <div class="card">
+<div>
+  <div class="card box">
     <a href="{{ .Permalink }}">
-      <img class="card-img-top" src="{{ .Site.BaseURL }}/img/img.jpg" alt="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{ .Title }}</h5>
-        <p class="card-text">{{ .Date.Format "jan 01, 2006" }}</p>
-      </div>
+      <h2>{{ .Title }}</h2>
+      <div>{{ .Date.Format "jan 01, 2006" }}</div>
+      {{ range .Params.tags }}
+        <span>{{ . }}</span>
+      {{ end }}
+      {{ .Summary }}
     </a>
   </div>
 </div>

@@ -16,6 +16,12 @@
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   </div>
 
+  <div>
+    {{ range $key, $value := .Site.Taxonomies.tags }}
+      <a class="badge badge-dark" href="{{ $.Site.BaseURL }}/tags/{{ $key }}">{{ $key }}({{ $value.Count }})</a>
+    {{ end }}
+  </div>
+
 </header>
 
 <main class="container">
