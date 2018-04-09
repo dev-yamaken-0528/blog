@@ -17,6 +17,7 @@
   </div>
 
   <div>
+    <a class="badge badge-dark" href="{{ $.Site.BaseURL }}/tags/">ALL</a>
     {{ range $key, $value := .Site.Taxonomies.tags }}
       <a class="badge badge-dark" href="{{ $.Site.BaseURL }}/tags/{{ $key }}">{{ $key }}({{ $value.Count }})</a>
     {{ end }}

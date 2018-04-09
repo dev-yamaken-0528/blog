@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+
+<ul>{{ $plural := .Data.Plural }}
+{{ range $key, $value := .Data.Terms }}
+<li><a href="{{ $.Site.BaseURL }}/{{ $plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
+{{ end }}
+</ul>
+
+{{ partial "footer.html" . }}
