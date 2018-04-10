@@ -1,12 +1,12 @@
-<div>
-  <div class="card box">
-    <a href="{{ .Permalink }}">
-      <h2>{{ .Title }}</h2>
-      <div>{{ .Date.Format "jan 01, 2006" }}</div>
+<div class="card">
+  <a class="black-text" href="{{ .Permalink }}">
+    <div class="card-title">{{ .Title }}</div>
+    <div class="card-content">
+      <p>{{ .Date.Format "2006.01.02" }}</p>
       {{ range .Params.tags }}
         <span>{{ . }}</span>
       {{ end }}
-      {{ .Summary }}
-    </a>
-  </div>
+      <p>{{ .Summary }}</p>
+    </div>
+  </a>
 </div>

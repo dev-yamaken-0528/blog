@@ -3,31 +3,42 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <title>y memo</title>
-  <link rel="stylesheet" href="http://153.126.205.190:49152/css/bootstrap/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="http://153.126.205.190:49152/css/materialize.min.css">
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/main.css">
 </head>
 <body>
 
-<div class="container-fluid">
 
 <header>
 
-  <div class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="http://153.126.205.190:49152">y memo</a>
+  <ul id="nav-dropdown" class="dropdown-content">
+    
+    <li>
+      <a href="http://153.126.205.190:49152/tags/aa/">aa(13)</a>
+    </li>
+    
+    <li>
+      <a href="http://153.126.205.190:49152/tags/bb/">bb(13)</a>
+    </li>
+    
+    <li>
+      <a href="http://153.126.205.190:49152/tags/cc/">cc(3)</a>
+    </li>
+    
+    <li>
+      <a href="http://153.126.205.190:49152/tags/dd/">dd(3)</a>
+    </li>
+    
+  </ul>
+  <nav>
+  <div class="nav-wrapper blue-grey darken-4">
+    <a href="http://153.126.205.190:49152" class="brand-logo">y memo</a>
+    <ul class="right">
+      <li><a class="dropdown-trigger" href="#!" data-target="nav-dropdown">Tags<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
   </div>
-
-  <div>
-    <a class="badge badge-dark" href="http://153.126.205.190:49152/tags/">ALL</a>
-    
-      <a class="badge badge-dark" href="http://153.126.205.190:49152/tags/aa/">aa(13)</a>
-    
-      <a class="badge badge-dark" href="http://153.126.205.190:49152/tags/bb/">bb(13)</a>
-    
-      <a class="badge badge-dark" href="http://153.126.205.190:49152/tags/cc/">cc(3)</a>
-    
-      <a class="badge badge-dark" href="http://153.126.205.190:49152/tags/dd/">dd(3)</a>
-    
-  </div>
+  </nav>
 
 </header>
 
@@ -40,13 +51,14 @@
 
 </main>
 
-<footer class="text-center text-light bg-dark">
-  <p>copyright 2018 y</p>
+<footer class="page-footer blue-grey darken-4">
+  <div class="footer-copyright">
+    <div class="container">@ copyright 2018 y</div>
+  </div>
 </footer>
 
-</div>
-
-<script type="text/javascript" src="http://153.126.205.190:49152/js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://153.126.205.190:49152/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="http://153.126.205.190:49152/js/materialize.min.js"></script>
 <script type="text/javascript" src="http://153.126.205.190:49152/js/main.js"></script>
 </body>
 </html>

@@ -5,3 +5,7 @@
 //      this.classList.toggle('anim');
 //    }
 //}
+
+$(document).ready(function(){
+  $(".dropdown-trigger").dropdown();
+})

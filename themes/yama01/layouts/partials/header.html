@@ -3,25 +3,30 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <title>{{ .Site.Title }}</title>
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/materialize.min.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
 </head>
 <body>
 
-<div class="container-fluid">
 
 <header>
 
-  <div class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-  </div>
-
-  <div>
-    <a class="badge badge-dark" href="{{ $.Site.BaseURL }}/tags/">ALL</a>
+  <ul id="nav-dropdown" class="dropdown-content">
     {{ range $key, $value := .Site.Taxonomies.tags }}
-      <a class="badge badge-dark" href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
+    <li>
+      <a href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
+    </li>
     {{ end }}
+  </ul>
+  <nav>
+  <div class="nav-wrapper blue-grey darken-4">
+    <a href="{{ .Site.BaseURL }}" class="brand-logo">{{ .Site.Title }}</a>
+    <ul class="right">
+      <li><a class="dropdown-trigger" href="#!" data-target="nav-dropdown">Tags<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
   </div>
+  </nav>
 
 </header>
 

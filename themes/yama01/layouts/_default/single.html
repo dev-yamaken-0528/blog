@@ -3,8 +3,10 @@
 
   <div>
     <h1>{{ .Title }}</h1>
-    <p>{{ .Date }}</p>
-    <p>{{ .Params.tags }}</p>
+    <p>{{ .Date.Format "2006.01.02" }}</p>
+    {{ range .Params.tags }}
+      <span>{{ . }}</span>
+    {{ end }}
   </div>
 
   <div>{{ .Content }}</div>
