@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<article>
 
+<article class="white">
   <div>
     <h1>{{ .Title }}</h1>
     <p>{{ .Date.Format "2006.01.02" }}</p>
@@ -8,8 +8,7 @@
       <span>{{ . }}</span>
     {{ end }}
   </div>
-
   <div>{{ .Content }}</div>
-
 </article>
+
 {{ partial "footer.html" . }}

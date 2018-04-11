@@ -1,12 +1,18 @@
 {{ partial "header.html" . }}
 
-  <ul>
-    {{ range .Data.Pages }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-    </li>
-    {{ end }}
-  </ul>
+{{ range .Data.Pages }}
+<div class="card">
+  <a class="black-text" href="{{ .Permalink }}">
+    <div class="card-title">{{ .Title }}</div>
+    <div class="card-content">
+      <p>{{ .Date.Format "2006.01.02" }}</p>
+      {{ range .Params.tags }}
+        <span>{{ . }}</span>
+      {{ end }}
+      <p>{{ .Summary }}</p>
+    </div>
+  </a>
+</div>
+{{ end }}
 
 {{ partial "footer.html" . }}

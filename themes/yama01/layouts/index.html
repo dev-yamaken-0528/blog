@@ -1,20 +1,18 @@
 {{ partial "header.html" . }}
 
-<article>
-  {{ range (.Paginator 5).Pages }}
+  {{ range (.Paginator 10).Pages }}
     {{ .Render "list" }}
   {{ end }}
-</article>
 
-{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-<div class="center">
-  {{ if .Paginator.HasPrev }}
-  <a class="waves-effect waves-light btn blue-grey darken-4" href="{{ .Paginator.Prev.URL }}">Prev</a>
+  {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+  <div class="fixed-action-btn">
+    {{ if .Paginator.HasPrev }}
+    <a class="waves-effect waves-light btn blue-grey light-5" href="{{ .Paginator.Prev.URL }}">Prev</a>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+    <a class="waves-effect waves-light btn blue-grey light-5" href="{{ .Paginator.Next.URL }}">Next</a>
+    {{ end }}
+  </div>
   {{ end }}
-  {{ if .Paginator.HasNext }}
-  <a class="waves-effect waves-light btn blue-grey darken-4" href="{{ .Paginator.Next.URL }}">Next</a>
-  {{ end }}
-</div>
-{{ end }}
 
 {{ partial "footer.html" . }}
