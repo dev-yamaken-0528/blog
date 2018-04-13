@@ -7,3 +7,8 @@ body{
 main{
   flex: 1 0 auto;
 }
+
+._btn-tag{
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}

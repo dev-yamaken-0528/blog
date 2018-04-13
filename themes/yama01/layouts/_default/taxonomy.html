@@ -1,18 +1,23 @@
 {{ partial "header.html" . }}
 
-{{ range .Data.Pages }}
-<div class="card">
-  <a class="black-text" href="{{ .Permalink }}">
-    <div class="card-title">{{ .Title }}</div>
-    <div class="card-content">
-      <p>{{ .Date.Format "2006.01.02" }}</p>
-      {{ range .Params.tags }}
-        <span>{{ . }}</span>
-      {{ end }}
-      <p>{{ .Summary }}</p>
-    </div>
-  </a>
-</div>
-{{ end }}
+<main class="container">
+  {{ range .Data.Pages }}
+  <div class="card">
+    <a class="black-text" href="{{ .Permalink }}">
+      <div class="card-title">{{ .Title }}</div>
+      <div class="card-content">
+        <p>{{ .Date.Format "2006.01.02" }}</p>
+        {{ range .Params.tags }}
+          <span>{{ . }}</span>
+        {{ end }}
+        <p>{{ .Summary }}</p>
+      </div>
+    </a>
+  </div>
+  {{ end }}
+  <div class="fixed-action-btn">
+    <a class="btn waves-effect waves-light blue-grey darken-1" href="#" onclick="history.back();return false;">BACK</a>
+  </div>
+</main>
 
 {{ partial "footer.html" . }}

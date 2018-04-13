@@ -2,6 +2,7 @@
 <html>
 <head lang="ja">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ .Site.Title }}</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/materialize.min.css">
@@ -9,27 +10,7 @@
 </head>
 <body class="blue-grey darken-4">
 
-
 <header>
-
-  <!--
-  <ul id="nav-dropdown" class="dropdown-content">
-    {{ range $key, $value := .Site.Taxonomies.tags }}
-    <li>
-      <a href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
-    </li>
-    {{ end }}
-  </ul>
-
-  <nav class="blue-grey darken-3">
-    <div class="nav-wrapper">
-      <a href="{{ .Site.BaseURL }}" class="brand-logo">{{ .Site.Title }}</a>
-      <ul class="right">
-        <li><a class="dropdown-trigger" href="#!" data-target="nav-dropdown">Tags<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-    </div>
-  </nav>
-  -->
 
   <nav class="blue-grey darken-3 center">
     <div class="nav-wrapper">
@@ -38,19 +19,3 @@
   </nav>
 
 </header>
-
-<main class="container">
-
-  {{- define "breadcrumb" }}
-    {{- if .node.Parent }}
-      {{- template "breadcrumb" (dict "node" .node.Parent "start" .start) }}
-    {{- else if not .node.IsHome }}
-      {{- template "breadcrumb" (dict "node" .node.Site.Home "start" .start) }}
-    {{- end }}
-    <a class="breadcrumb" href="{{ .node.Permalink }}">{{ .node.LinkTitle }}</a>
-  {{- end }}
-
-  <nav class="blue-grey darken-4">
-    {{- template "breadcrumb" (dict "node" . "start" .) }}
-  </nav>
-
