@@ -4,7 +4,7 @@
     <div class="card-content">
       <p>{{ .Date.Format "2006.01.02" }}</p>
       {{ range .Params.tags }}
-        <span>{{ . }}</span>
+      <a href="{{ $.Site.BaseURL }}/tags/{{ . }}/">{{ . }}</a>
       {{ end }}
       <p>{{ .Summary }}</p>
     </div>

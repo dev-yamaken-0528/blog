@@ -2,29 +2,19 @@
 
 <main class="container">
 
-  <div class="row">
-    <div class="col s12 m4 l2">
-      {{ range $key, $value := .Site.Taxonomies.tags }}
-      <a class="_btn-tag btn waves-effect waves-light blue-grey darken-1" href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
-      {{ end }}
-    </div>
-    <div class="col s12 m8 l10">
-      {{ range (.Paginator 10).Pages }}
-        {{ .Render "list" }}
-      {{ end }}
-    
-      {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-      <div class="fixed-action-btn">
-        {{ if .Paginator.HasPrev }}
-        <a class="btn waves-effect waves-light blue-grey darken-1" href="{{ .Paginator.Prev.URL }}">Prev</a>
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-        <a class="btn waves-effect waves-light blue-grey darken-1" href="{{ .Paginator.Next.URL }}">Next</a>
-        {{ end }}
-      </div>
-      {{ end }}
-    </div>
+  {{ range (.Paginator 10).Pages }}
+    {{ .Render "list" }}
+  {{ end }}
+  {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+  <div class="fixed-action-btn">
+    {{ if .Paginator.HasPrev }}
+    <a class="btn waves-effect waves-light blue-grey darken-1" href="{{ .Paginator.Prev.URL }}">Prev</a>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+    <a class="btn waves-effect waves-light blue-grey darken-1" href="{{ .Paginator.Next.URL }}">Next</a>
+    {{ end }}
   </div>
+  {{ end }}
 
 </main>
 
