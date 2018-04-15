@@ -3,8 +3,8 @@
 <main class="container">
   <article class="white">
     <div>
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Date.Format "2006.01.02" }}</p>
+      <h2>{{ .Title }}</h2>
+      {{ .Date.Format "2006.01.02" }}
       {{ range .Params.tags }}
         [{{ . }}]
       {{ end }}

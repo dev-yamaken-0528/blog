@@ -6,89 +6,26 @@
     <description>Recent content in Tags on y memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:02 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Apr 2018 16:28:07 +0900</lastBuildDate>
     
 	<atom:link href="http://153.126.205.190:49152/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Aa</title>
-      <link>http://153.126.205.190:49152/tags/aa/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:02 +0000</pubDate>
+      <title>Centos7</title>
+      <link>http://153.126.205.190:49152/tags/centos7/</link>
+      <pubDate>Sun, 15 Apr 2018 16:28:07 +0900</pubDate>
       
-      <guid>http://153.126.205.190:49152/tags/aa/</guid>
+      <guid>http://153.126.205.190:49152/tags/centos7/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bb</title>
-      <link>http://153.126.205.190:49152/tags/bb/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:04 +0000</pubDate>
+      <title>Docker</title>
+      <link>http://153.126.205.190:49152/tags/docker/</link>
+      <pubDate>Sun, 15 Apr 2018 16:28:07 +0900</pubDate>
       
-      <guid>http://153.126.205.190:49152/tags/bb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cc</title>
-      <link>http://153.126.205.190:49152/tags/cc/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:06 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/cc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dd</title>
-      <link>http://153.126.205.190:49152/tags/dd/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:08 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/dd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ee</title>
-      <link>http://153.126.205.190:49152/tags/ee/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:10 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/ee/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ff</title>
-      <link>http://153.126.205.190:49152/tags/ff/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:12 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/ff/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gg</title>
-      <link>http://153.126.205.190:49152/tags/gg/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:14 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/gg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hh</title>
-      <link>http://153.126.205.190:49152/tags/hh/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:15 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/hh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ii</title>
-      <link>http://153.126.205.190:49152/tags/ii/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:15 +0000</pubDate>
-      
-      <guid>http://153.126.205.190:49152/tags/ii/</guid>
+      <guid>http://153.126.205.190:49152/tags/docker/</guid>
       <description></description>
     </item>
     

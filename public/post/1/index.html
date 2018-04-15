@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>y memo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="http://153.126.205.190:49152/css/materialize.min.css">
+  <link rel="stylesheet" href="http://153.126.205.190:49152/css/syntax.css">
+  <link rel="stylesheet" href="http://153.126.205.190:49152/css/main.css">
+</head>
+<body>
+
+<header>
+
+  <div class="_nav navbar-fixed">
+    <nav class="blue-grey darken-3 center nav-extended">
+      <div class="nav-wrapper">
+        <a href="http://153.126.205.190:49152" class="brand-logo">y memo</a>
+      </div>
+      <div class="nav-content">
+        <div class="scroll-wrapper">
+          <div class="scroll-inner">
+            
+            <a class="btn waves-effect waves-light blue-grey darken-1" href="http://153.126.205.190:49152/tags/centos7/">centos7(1)</a>
+            
+            <a class="btn waves-effect waves-light blue-grey darken-1" href="http://153.126.205.190:49152/tags/docker/">docker(1)</a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+<main class="container">
+  <article class="white">
+    <div>
+      <h2>CentOS7にDockerをインストール</h2>
+      2018.04.15
+      
+        [Docker]
+      
+        [CentOS7]
+      
+    </div>
+    <div><p></p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// Uninstall old versions
+</span><span class="c1"></span><span class="err">#</span> <span class="nx">yum</span> <span class="nx">remove</span> <span class="nx">docker</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">common</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">selinux</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">engine</span>
+
+<span class="c1">// Install
+</span><span class="c1"></span><span class="err">#</span> <span class="nx">yum</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">y</span> <span class="nx">yum</span><span class="o">-</span><span class="nx">utils</span> <span class="nx">device</span><span class="o">-</span><span class="nx">mapper</span><span class="o">-</span><span class="nx">persistent</span><span class="o">-</span><span class="nx">data</span> <span class="nx">lvm2</span>
+<span class="err">#</span> <span class="nx">yum</span><span class="o">-</span><span class="nx">config</span><span class="o">-</span><span class="nx">manager</span> <span class="o">--</span><span class="nx">add</span><span class="o">-</span><span class="nx">repo</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//download.docker.com/linux/centos/docker-ce.repo
+</span><span class="c1"></span><span class="err">#</span> <span class="nx">yum</span><span class="o">-</span><span class="nx">config</span><span class="o">-</span><span class="nx">manager</span> <span class="o">--</span><span class="nx">enable</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">ce</span><span class="o">-</span><span class="nx">test</span>
+
+<span class="err">#</span> <span class="nx">yum</span> <span class="nx">install</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">ce</span>
+<span class="c1">//# yum list docker-ce --showduplicates | sort -r
+</span><span class="c1">//e.g   docker-ce.x86_64    17.12.ce-1.el7.centos    docker-ce-stable
+</span><span class="c1">//# yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
+</span><span class="c1"></span><span class="err">#</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">docker</span>
+
+<span class="c1">// hello world
+</span><span class="c1"></span><span class="err">$</span> <span class="nx">su</span> <span class="o">-</span>
+<span class="err">#</span> <span class="nx">docker</span> <span class="nx">run</span> <span class="nx">hello</span><span class="o">-</span><span class="nx">world</span>
+
+<span class="c1">// Uninstall Docker CE
+</span><span class="c1"></span><span class="err">$</span> <span class="nx">su</span> <span class="o">-</span>
+<span class="err">#</span> <span class="nx">yum</span> <span class="nx">remove</span> <span class="nx">docker</span><span class="o">-</span><span class="nx">ce</span>
+<span class="err">#</span> <span class="nx">rm</span> <span class="o">-</span><span class="nx">rf</span> <span class="o">/</span><span class="kd">var</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">docker</span></code></pre></div></div>
+  </article>
+  <div class="fixed-action-btn">
+    <a class="btn waves-effect waves-light blue-grey darken-1" href="#" onclick="history.back();return false;">BACK</a>
+  </div>
+</main>
+
+<footer class="page-footer blue-grey darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+      Powered by
+      <a href="https://gohugo.io/">HUGO</a>
+      <a href="http://materializecss.com/">Materialize</a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="http://153.126.205.190:49152/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="http://153.126.205.190:49152/js/materialize.min.js"></script>
+<script type="text/javascript" src="http://153.126.205.190:49152/js/main.js"></script>
+</body>
+</html>
+
