@@ -2,6 +2,9 @@ baseURL = "http://153.126.205.190:49152"
 languageCode = "ja"
 title = "y memo"
 
+pygmentsCodefences = true
+pygmentsUseClasses = true
+
 [taxonomies]
   tag = "tags"
   category = "categories"

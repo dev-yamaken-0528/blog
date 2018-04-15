@@ -2,9 +2,9 @@
   <a class="black-text" href="{{ .Permalink }}">
     <div class="card-title">{{ .Title }}</div>
     <div class="card-content">
-      <p>{{ .Date.Format "2006.01.02" }}</p>
+      {{ .Date.Format "2006.01.02" }}
       {{ range .Params.tags }}
-      <a href="{{ $.Site.BaseURL }}/tags/{{ . }}/">{{ . }}</a>
+        [{{ . }}]
       {{ end }}
       <p>{{ .Summary }}</p>
     </div>
