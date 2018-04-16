@@ -1,18 +1,22 @@
 {{ partial "header.html" . }}
 
-<main class="container">
-  <article class="white">
-    <div>
-      <h2>{{ .Title }}</h2>
-      {{ .Date.Format "2006.01.02" }}
-      {{ range .Params.tags }}
-        [{{ . }}]
-      {{ end }}
+<main>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Date.Format "2006.01.02" }}</p>
+          {{ range .Params.tags }}
+            [{{ . }}]
+          {{ end }}
+          <p>{{ .Content }}</p>
+      </div>
     </div>
-    <div>{{ .Content }}</div>
-  </article>
-  <div class="fixed-action-btn">
-    <a class="btn waves-effect waves-light blue-grey darken-1" href="#" onclick="history.back();return false;">BACK</a>
+    <div class="row">
+      <div class="col">
+        <a class="btn" href="#" onclick="history.back();return false;">BACK</a>
+      </div>
+    </div>
   </div>
 </main>
 

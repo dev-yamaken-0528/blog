@@ -1,15 +1,19 @@
-<footer class="page-footer blue-grey darken-3">
-  <div class="footer-copyright">
-    <div class="container">
+<footer>
+  <div class="row">
+    <div class="col">
+      <p>Tags</p>
+      {{ range $key, $value := .Site.Taxonomies.tags }}
+      <a href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
+      {{ end }}
+    </div>
+    <div class="col">
       Powered by
       <a href="https://gohugo.io/">HUGO</a>
-      <a href="http://materializecss.com/">Materialize</a>
+      <a href="https://ajusa.github.io/lit/">lit</a>
     </div>
   </div>
 </footer>
 
-<script type="text/javascript" src="{{ .Site.BaseURL }}/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="{{ .Site.BaseURL }}/js/materialize.min.js"></script>
 <script type="text/javascript" src="{{ .Site.BaseURL }}/js/main.js"></script>
 </body>
 </html>
