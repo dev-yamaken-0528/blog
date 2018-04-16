@@ -3,7 +3,7 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>y memo</title>
+  <title>技術ブログとか</title>
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/lit.css">
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/syntax.css">
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/main.css">
@@ -14,7 +14,14 @@
   <div class="c">
     <div class="row">
       <div class="card">
-        <b><a href="http://153.126.205.190:49152">y memo</a></b>
+        <a href="http://153.126.205.190:49152">
+        <b>
+          技術ブログとか
+        </b>
+        <span>
+          (業務や学習で得た知見をまとめたり、何かしらアップしたり)
+        </span>
+        </a>
       </div>
     </div>
   </div>
@@ -25,17 +32,69 @@
   <div class="c">
     <div class="row">
       <div class="col">
-          <h2>3</h2>
+          <h2>vimでvim-plugを使う</h2>
           <p>2018.04.16</p>
           
-            [aa]
+          <a href="http://153.126.205.190:49152/tags/vim/">[vim]</a>
           
-          <p><p>xxx</p>
+          <p><p></p>
 
-<p></p>
+<p>インストール</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># インストール
+</span><span class="c1"></span>curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-<p>xxx</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"></code></pre></div></p>
+<span class="c1"># vimrc設定
+</span><span class="c1"></span>vim ~/.vimrc
+
+<span class="c1"># プラグインインストール
+</span><span class="c1"># vim中に
+</span><span class="c1"></span>:PlugInstall</code></pre></div>
+<p>使っているvimrc</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">call plug#begin<span class="o">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="o">)</span>
+Plug <span class="s1">&#39;scrooloose/nerdtree&#39;</span>, <span class="o">{</span> <span class="s1">&#39;on&#39;</span>: <span class="o">[</span><span class="s1">&#39;NERDTreeToggle&#39;</span><span class="o">]</span> <span class="o">}</span>
+Plug <span class="s1">&#39;w0ng/vim-hybrid&#39;</span>
+Plug <span class="s1">&#39;Shougo/unite.vim&#39;</span>
+Plug <span class="s1">&#39;mattn/emmet-vim&#39;</span>
+Plug <span class="s1">&#39;digitaltoad/vim-pug&#39;</span>
+Plug <span class="s1">&#39;nathanaelkane/vim-indent-guides&#39;</span>
+call plug#end<span class="o">()</span>
+
+syntax on
+<span class="nb">set</span> nu
+<span class="nb">set</span> <span class="nv">tabstop</span><span class="o">=</span><span class="m">2</span>
+<span class="nb">set</span> expandtab
+<span class="nb">set</span> <span class="nv">shiftwidth</span><span class="o">=</span><span class="m">2</span>
+<span class="nb">set</span> <span class="nv">background</span><span class="o">=</span>dark
+colorscheme hybrid
+<span class="nb">set</span> <span class="nv">backspace</span><span class="o">=</span>indent,eol,start
+
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">=</span>%F
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">+=</span>%<span class="o">=</span>
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">+=[</span><span class="nv">enc</span><span class="o">=</span>%<span class="o">{</span><span class="p">&amp;</span>fileencoding<span class="o">}]</span>
+<span class="nb">set</span> <span class="nv">laststatus</span><span class="o">=</span><span class="m">2</span>
+
+nmap &lt;Tab&gt; gt
+nmap &lt;S-Tab&gt; gT
+
+autocmd BufNewFile,BufRead *.js setlocal <span class="nv">ft</span><span class="o">=</span>javascript
+autocmd BufNewFile,BufRead *.ejs setlocal <span class="nv">ft</span><span class="o">=</span>html
+autocmd BufNewFile,BufRead *.pug setlocal <span class="nv">ft</span><span class="o">=</span>pug
+autocmd BufNewFile,BufRead *.eex setlocal <span class="nv">ft</span><span class="o">=</span>html
+autocmd BufNewFile,BufRead *.py setlocal <span class="nv">ft</span><span class="o">=</span>python
+autocmd BufNewFile,BufRead *.rb setlocal <span class="nv">ft</span><span class="o">=</span>ruby
+autocmd BufNewFile,BufRead Gemfile setlocal <span class="nv">ft</span><span class="o">=</span>ruby
+autocmd BufNewFile,BufRead *.coffee setlocal <span class="nv">ft</span><span class="o">=</span>coffee
+autocmd BufNewFile,BufRead *.ts setlocal <span class="nv">ft</span><span class="o">=</span>typescript
+autocmd BufNewFile,BufRead *.md setlocal <span class="nv">ft</span><span class="o">=</span>markdown
+autocmd BufNewFile,BufRead *.jade setlocal <span class="nv">ft</span><span class="o">=</span>markdown
+autocmd BufNewFile,BufRead *.gyp setlocal <span class="nv">ft</span><span class="o">=</span>json
+
+<span class="nb">let</span> g:user_emmet_mode <span class="o">=</span> <span class="s1">&#39;iv&#39;</span>
+autocmd FileType html imap &lt;buffer&gt;&lt;expr&gt;&lt;C-E&gt;
+    <span class="se">\ </span>emmet#isExpandable<span class="o">()</span> ? <span class="s2">&#34;\&lt;plug&gt;(emmet-expand-abbr)&#34;</span> :
+    <span class="se">\ </span><span class="s2">&#34;\&lt;C-E&gt;&#34;</span>
+
+<span class="nb">let</span> g:indent_guides_enable_on_vim_startup <span class="o">=</span> <span class="m">1</span></code></pre></div></p>
       </div>
     </div>
     <div class="row">
@@ -51,31 +110,15 @@
     <div class="col">
       <p>Tags</p>
       
-      <a href="http://153.126.205.190:49152/tags/aa/">aa(2)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/bb/">bb(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/cc/">cc(1)</a>
-      
       <a href="http://153.126.205.190:49152/tags/centos7/">centos7(1)</a>
       
-      <a href="http://153.126.205.190:49152/tags/dd/">dd(1)</a>
+      <a href="http://153.126.205.190:49152/tags/docker/">docker(2)</a>
       
-      <a href="http://153.126.205.190:49152/tags/docker/">docker(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ee/">ee(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ff/">ff(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/gg/">gg(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/hh/">hh(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ii/">ii(1)</a>
+      <a href="http://153.126.205.190:49152/tags/vim/">vim(1)</a>
       
     </div>
     <div class="col">
-      Powered by
+      <p>Powered by</p>
       <a href="https://gohugo.io/">HUGO</a>
       <a href="https://ajusa.github.io/lit/">lit</a>
     </div>

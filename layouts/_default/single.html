@@ -7,7 +7,7 @@
           <h2>{{ .Title }}</h2>
           <p>{{ .Date.Format "2006.01.02" }}</p>
           {{ range .Params.tags }}
-            [{{ . }}]
+          <a href="{{ $.Site.BaseURL }}/tags/{{ . }}/">[{{ . }}]</a>
           {{ end }}
           <p>{{ .Content }}</p>
       </div>

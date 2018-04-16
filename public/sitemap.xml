@@ -3,46 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://153.126.205.190:49152/post/11/</loc>
-    <lastmod>2018-04-16T10:15:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/10/</loc>
-    <lastmod>2018-04-16T10:13:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/9/</loc>
-    <lastmod>2018-04-16T10:13:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/8/</loc>
-    <lastmod>2018-04-16T10:13:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/7/</loc>
-    <lastmod>2018-04-16T10:13:49+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/6/</loc>
-    <lastmod>2018-04-16T10:13:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/5/</loc>
-    <lastmod>2018-04-16T10:13:45+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/post/4/</loc>
-    <lastmod>2018-04-16T10:13:43+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://153.126.205.190:49152/post/3/</loc>
     <lastmod>2018-04-16T10:13:41+09:00</lastmod>
   </url>
@@ -58,25 +18,7 @@
   </url>
   
   <url>
-    <loc>http://153.126.205.190:49152/tags/aa/</loc>
-    <lastmod>2018-04-16T10:13:41+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/bb/</loc>
-    <lastmod>2018-04-16T10:13:43+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://153.126.205.190:49152/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/cc/</loc>
-    <lastmod>2018-04-16T10:13:45+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,62 +29,32 @@
   </url>
   
   <url>
-    <loc>http://153.126.205.190:49152/tags/dd/</loc>
-    <lastmod>2018-04-16T10:13:47+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://153.126.205.190:49152/tags/docker/</loc>
-    <lastmod>2018-04-15T16:28:07+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/ee/</loc>
-    <lastmod>2018-04-16T10:13:49+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/ff/</loc>
-    <lastmod>2018-04-16T10:13:52+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/gg/</loc>
-    <lastmod>2018-04-16T10:13:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/hh/</loc>
-    <lastmod>2018-04-16T10:13:58+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://153.126.205.190:49152/tags/ii/</loc>
-    <lastmod>2018-04-16T10:15:03+09:00</lastmod>
+    <lastmod>2018-04-16T10:13:38+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://153.126.205.190:49152/post/</loc>
-    <lastmod>2018-04-16T10:15:03+09:00</lastmod>
+    <lastmod>2018-04-16T10:13:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://153.126.205.190:49152/tags/</loc>
+    <lastmod>2018-04-15T16:28:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://153.126.205.190:49152/tags/vim/</loc>
     <lastmod>2018-04-16T10:13:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://153.126.205.190:49152/</loc>
-    <lastmod>2018-04-16T10:15:03+09:00</lastmod>
+    <lastmod>2018-04-16T10:13:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   

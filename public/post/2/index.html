@@ -3,7 +3,7 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>y memo</title>
+  <title>技術ブログとか</title>
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/lit.css">
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/syntax.css">
   <link rel="stylesheet" href="http://153.126.205.190:49152/css/main.css">
@@ -14,7 +14,14 @@
   <div class="c">
     <div class="row">
       <div class="card">
-        <b><a href="http://153.126.205.190:49152">y memo</a></b>
+        <a href="http://153.126.205.190:49152">
+        <b>
+          技術ブログとか
+        </b>
+        <span>
+          (業務や学習で得た知見をまとめたり、何かしらアップしたり)
+        </span>
+        </a>
       </div>
     </div>
   </div>
@@ -25,17 +32,99 @@
   <div class="c">
     <div class="row">
       <div class="col">
-          <h2>2</h2>
+          <h2>Dockerでよく使うコマンド</h2>
           <p>2018.04.16</p>
           
-            [aa]
+          <a href="http://153.126.205.190:49152/tags/docker/">[docker]</a>
           
-          <p><p>xxx</p>
+          <p><p></p>
 
-<p></p>
+<p>イメージを作る</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker build --no-cache<span class="o">=</span><span class="nb">true</span> -t <span class="o">{</span>image<span class="o">}</span> <span class="o">{</span>woring_dir<span class="o">}</span></code></pre></div>
+<p>コンテナを作る</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 作成
+</span><span class="c1"></span>docker run -dit -e <span class="s2">&#34;{env}&#34;</span> -p <span class="o">{</span>host_port<span class="o">}</span>:<span class="o">{</span>container_port<span class="o">}</span> -v <span class="o">{</span>host_dir<span class="o">}</span>:<span class="o">{</span>container_dir<span class="o">}</span> --name <span class="o">{</span>container<span class="o">}</span> <span class="o">{</span>image<span class="o">}</span>
+<span class="c1"># 例
+</span><span class="c1"></span>docker run -dit -e <span class="s2">&#34;TZ=Asia/Tokyo&#34;</span> -p <span class="m">50001</span>:22 -v /host/work:/container/work --name container image</code></pre></div>
+<p>※ポート番号について</p>
 
-<p>xxx</p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"></code></pre></div></p>
+<p>0～1023 &gt; 一般的なポート番号</p>
+
+<p>1024～49151 &gt; 登録済みのポート番号</p>
+
+<p>49152～65535 &gt; 自由に使えるポート番号</p>
+
+<p>起動中のコンテナ一覧を表示する</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 起動中のみ
+</span><span class="c1"></span>docker ps
+<span class="c1"># すべて表示
+</span><span class="c1"></span>docker ps -a</code></pre></div>
+<p>テンプレートを使って表示する</p>
+
+<table>
+<thead>
+<tr>
+<th>プレースホルダ</th>
+<th>意味</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>.ID</td>
+<td>コンテナID</td>
+</tr>
+
+<tr>
+<td>.Image</td>
+<td>イメージID</td>
+</tr>
+
+<tr>
+<td>.Command</td>
+<td>コマンド</td>
+</tr>
+
+<tr>
+<td>.CreatedAt</td>
+<td>コンテナが作成された日時</td>
+</tr>
+
+<tr>
+<td>.RunningFor</td>
+<td>コンテナが起動してからの経過時間</td>
+</tr>
+
+<tr>
+<td>.Ports</td>
+<td>バインドしているポート</td>
+</tr>
+
+<tr>
+<td>.Status</td>
+<td>コンテナの状態</td>
+</tr>
+
+<tr>
+<td>.Names</td>
+<td>コンテナの名前</td>
+</tr>
+
+<tr>
+<td>.Labels</td>
+<td>コンテナに割り当てられたすべてのラベル</td>
+</tr>
+
+<tr>
+<td>.Label</td>
+<td>特定のラベル</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># IDと状態を表示
+</span><span class="c1"></span>docker ps --format <span class="s2">&#34;{{.ID}} {{.Status}}&#34;</span>
+b14e79aed553 Up <span class="m">36</span> minutes
+ac0e10831d45 Up <span class="m">44</span> minutes <span class="o">(</span>Paused<span class="o">)</span></code></pre></div></p>
       </div>
     </div>
     <div class="row">
@@ -51,31 +140,15 @@
     <div class="col">
       <p>Tags</p>
       
-      <a href="http://153.126.205.190:49152/tags/aa/">aa(2)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/bb/">bb(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/cc/">cc(1)</a>
-      
       <a href="http://153.126.205.190:49152/tags/centos7/">centos7(1)</a>
       
-      <a href="http://153.126.205.190:49152/tags/dd/">dd(1)</a>
+      <a href="http://153.126.205.190:49152/tags/docker/">docker(2)</a>
       
-      <a href="http://153.126.205.190:49152/tags/docker/">docker(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ee/">ee(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ff/">ff(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/gg/">gg(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/hh/">hh(1)</a>
-      
-      <a href="http://153.126.205.190:49152/tags/ii/">ii(1)</a>
+      <a href="http://153.126.205.190:49152/tags/vim/">vim(1)</a>
       
     </div>
     <div class="col">
-      Powered by
+      <p>Powered by</p>
       <a href="https://gohugo.io/">HUGO</a>
       <a href="https://ajusa.github.io/lit/">lit</a>
     </div>
