@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 技術ブログとか</title>
-    <link>http://153.126.205.190:49152/post/</link>
-    <description>Recent content in Posts on 技術ブログとか</description>
+    <title>Centos on 技術ブログとか</title>
+    <link>http://153.126.205.190:49152/tags/centos/</link>
+    <description>Recent content in Centos on 技術ブログとか</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 17 Apr 2018 14:42:14 +0900</lastBuildDate>
     
-	<atom:link href="http://153.126.205.190:49152/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://153.126.205.190:49152/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,24 +17,6 @@
       <pubDate>Tue, 17 Apr 2018 14:42:14 +0900</pubDate>
       
       <guid>http://153.126.205.190:49152/post/4/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>vimでvim-plugを使う</title>
-      <link>http://153.126.205.190:49152/post/3/</link>
-      <pubDate>Mon, 16 Apr 2018 10:13:41 +0900</pubDate>
-      
-      <guid>http://153.126.205.190:49152/post/3/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Dockerでよく使うコマンド</title>
-      <link>http://153.126.205.190:49152/post/2/</link>
-      <pubDate>Mon, 16 Apr 2018 10:13:38 +0900</pubDate>
-      
-      <guid>http://153.126.205.190:49152/post/2/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     

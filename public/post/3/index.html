@@ -19,7 +19,7 @@
           技術ブログとか
         </b>
         <span>
-          (業務や学習で得た知見をまとめたり、何かしらアップしたり)
+          (自分用のメモであったり、何かしらアップしたり)
         </span>
         </a>
       </div>
@@ -90,9 +90,7 @@ autocmd BufNewFile,BufRead *.jade setlocal <span class="nv">ft</span><span class
 autocmd BufNewFile,BufRead *.gyp setlocal <span class="nv">ft</span><span class="o">=</span>json
 
 <span class="nb">let</span> g:user_emmet_mode <span class="o">=</span> <span class="s1">&#39;iv&#39;</span>
-autocmd FileType html imap &lt;buffer&gt;&lt;expr&gt;&lt;C-E&gt;
-    <span class="se">\ </span>emmet#isExpandable<span class="o">()</span> ? <span class="s2">&#34;\&lt;plug&gt;(emmet-expand-abbr)&#34;</span> :
-    <span class="se">\ </span><span class="s2">&#34;\&lt;C-E&gt;&#34;</span>
+autocmd FileType html imap &lt;buffer&gt;&lt;expr&gt;&lt;C-E&gt; emmet#isExpandable<span class="o">()</span> ? <span class="s2">&#34;\&lt;plug&gt;(emmet-expand-abbr)&#34;</span> : <span class="s2">&#34;\&lt;C-E&gt;&#34;</span>
 
 <span class="nb">let</span> g:indent_guides_enable_on_vim_startup <span class="o">=</span> <span class="m">1</span></code></pre></div></p>
       </div>
@@ -110,9 +108,17 @@ autocmd FileType html imap &lt;buffer&gt;&lt;expr&gt;&lt;C-E&gt;
     <div class="col">
       <p>Tags</p>
       
-      <a href="http://153.126.205.190:49152/tags/centos7/">centos7(1)</a>
+      <a href="http://153.126.205.190:49152/tags/centos/">centos(2)</a>
       
-      <a href="http://153.126.205.190:49152/tags/docker/">docker(2)</a>
+      <a href="http://153.126.205.190:49152/tags/docker/">docker(3)</a>
+      
+      <a href="http://153.126.205.190:49152/tags/express/">express(1)</a>
+      
+      <a href="http://153.126.205.190:49152/tags/nginx/">nginx(1)</a>
+      
+      <a href="http://153.126.205.190:49152/tags/nodejs/">nodejs(1)</a>
+      
+      <a href="http://153.126.205.190:49152/tags/postgres/">postgres(1)</a>
       
       <a href="http://153.126.205.190:49152/tags/vim/">vim(1)</a>
       
