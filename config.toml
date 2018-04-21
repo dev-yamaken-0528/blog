@@ -2,8 +2,6 @@ baseURL = "http://kyamawork.info/"
 languageCode = "ja"
 title = "技術ブログとか"
 
-googleAnalytics = "UA-117981223-1"
-
 pygmentsCodefences = true
 pygmentsUseClasses = true
 
