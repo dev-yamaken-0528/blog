@@ -40,38 +40,25 @@
   <div class="c">
     <div class="row">
       <div class="col">
-          <h2>CentOS7にDockerをインストール</h2>
-          <p>2018.04.15</p>
-          
-          <a href="http://kyamawork.info//tags/docker/">[docker]</a>
-          
-          <a href="http://kyamawork.info//tags/centos/">[centos]</a>
-          
-          <p><p></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">su -
+        
+          <div class="card">
+  <a href="http://kyamawork.info/post/5/">
+    <p>DockerのAlpineにPostgreSQLをインストールする</p>
+    <p>
+      2018.04.28
+      
+        [docker]
+      
+        [alpine]
+      
+        [postgres]
+      
+    </p>
+    <p><p></p></p>
+  </a>
+</div>
 
-<span class="c1"># Uninstall old versions
-</span><span class="c1"></span>yum remove docker docker-common docker-selinux docker-engine
-
-<span class="c1"># Install
-</span><span class="c1"></span>yum install -y yum-utils device-mapper-persistent-data lvm2
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum-config-manager --enable docker-ce-test
-
-yum install docker-ce
-<span class="c1"># yum list docker-ce --showduplicates | sort -r
-</span><span class="c1"># e.g   docker-ce.x86_64    17.12.ce-1.el7.centos    docker-ce-stable
-</span><span class="c1"># yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
-</span><span class="c1"></span>systemctl start docker
-
-<span class="c1"># hello world
-</span><span class="c1"></span>su -
-docker run hello-world
-
-<span class="c1"># Uninstall Docker CE
-</span><span class="c1"></span>su -
-yum remove docker-ce
-rm -rf /var/lib/docker</code></pre></div></p>
+        
       </div>
     </div>
     <div class="row">

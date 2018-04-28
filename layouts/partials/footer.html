@@ -1,15 +1,17 @@
 <footer>
-  <div class="row">
-    <div class="col">
-      <p>Tags</p>
-      {{ range $key, $value := .Site.Taxonomies.tags }}
-      <a href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
-      {{ end }}
-    </div>
-    <div class="col">
-      <p>Powered by</p>
-      <a href="https://gohugo.io/">HUGO</a>
-      <a href="https://ajusa.github.io/lit/">lit</a>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+        <p>Tags</p>
+        {{ range $key, $value := .Site.Taxonomies.tags }}
+        <a href="{{ $.Site.BaseURL }}/tags/{{ $key }}/">{{ $key }}({{ $value.Count }})</a>
+        {{ end }}
+      </div>
+      <div class="col">
+        <p>Powered by</p>
+        <a href="https://gohugo.io/">[HUGO]</a>
+        <a href="https://ajusa.github.io/lit/">[lit]</a>
+      </div>
     </div>
   </div>
 </footer>
