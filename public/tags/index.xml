@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 技術ブログとか</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 28 Apr 2018 10:10:35 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 01 May 2018 13:05:20 +0900</lastBuildDate>
     
 	<atom:link href="http://kyamawork.info/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Alpine</title>
       <link>http://kyamawork.info/tags/alpine/</link>
-      <pubDate>Sat, 28 Apr 2018 10:10:35 +0900</pubDate>
+      <pubDate>Tue, 01 May 2018 13:05:20 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/alpine/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>Docker</title>
       <link>http://kyamawork.info/tags/docker/</link>
-      <pubDate>Sat, 28 Apr 2018 10:10:35 +0900</pubDate>
+      <pubDate>Tue, 01 May 2018 13:05:20 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/docker/</guid>
       <description></description>
@@ -71,6 +71,15 @@
       <pubDate>Sat, 28 Apr 2018 10:10:35 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://kyamawork.info/tags/python/</link>
+      <pubDate>Tue, 01 May 2018 13:05:20 +0900</pubDate>
+      
+      <guid>http://kyamawork.info/tags/python/</guid>
       <description></description>
     </item>
     
