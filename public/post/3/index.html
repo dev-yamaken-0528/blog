@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>技術ブログとか</title>
+  <link rel="stylesheet" href="http://kyamawork.info//css/lit.css">
+  <link rel="stylesheet" href="http://kyamawork.info//css/syntax.css">
+  <link rel="stylesheet" href="http://kyamawork.info//css/main.css">
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117981223-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-117981223-1');
+    </script>
+  
+</head>
+<body>
+<header>
+  <div class="c">
+    <div class="row">
+      <div class="card">
+        <a href="http://kyamawork.info/">
+        <b>
+          技術ブログとか
+        </b>
+        <span>
+          (自分用のメモであったり、何かしらアップしたり)
+        </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+          <h2>vimでvim-plugを使う</h2>
+          <p>2018.04.16</p>
+          
+          <a href="http://kyamawork.info//tags/vim/">[vim]</a>
+          
+          <p><p></p>
+
+<p>インストール</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># インストール
+</span><span class="c1"></span>curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+<span class="c1"># vimrc設定
+</span><span class="c1"></span>vim ~/.vimrc
+
+<span class="c1"># プラグインインストール
+</span><span class="c1"># vim中に
+</span><span class="c1"></span>:PlugInstall</code></pre></div>
+<p>使っているvimrc</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">call plug#begin<span class="o">(</span><span class="s1">&#39;~/.vim/plugged&#39;</span><span class="o">)</span>
+Plug <span class="s1">&#39;scrooloose/nerdtree&#39;</span>, <span class="o">{</span> <span class="s1">&#39;on&#39;</span>: <span class="o">[</span><span class="s1">&#39;NERDTreeToggle&#39;</span><span class="o">]</span> <span class="o">}</span>
+Plug <span class="s1">&#39;w0ng/vim-hybrid&#39;</span>
+Plug <span class="s1">&#39;Shougo/unite.vim&#39;</span>
+Plug <span class="s1">&#39;mattn/emmet-vim&#39;</span>
+Plug <span class="s1">&#39;digitaltoad/vim-pug&#39;</span>
+Plug <span class="s1">&#39;nathanaelkane/vim-indent-guides&#39;</span>
+call plug#end<span class="o">()</span>
+
+syntax on
+<span class="nb">set</span> nu
+<span class="nb">set</span> <span class="nv">tabstop</span><span class="o">=</span><span class="m">2</span>
+<span class="nb">set</span> expandtab
+<span class="nb">set</span> <span class="nv">shiftwidth</span><span class="o">=</span><span class="m">2</span>
+<span class="nb">set</span> <span class="nv">background</span><span class="o">=</span>dark
+colorscheme hybrid
+<span class="nb">set</span> <span class="nv">backspace</span><span class="o">=</span>indent,eol,start
+
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">=</span>%F
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">+=</span>%<span class="o">=</span>
+<span class="nb">set</span> <span class="nv">statusline</span><span class="o">+=[</span><span class="nv">enc</span><span class="o">=</span>%<span class="o">{</span><span class="p">&amp;</span>fileencoding<span class="o">}]</span>
+<span class="nb">set</span> <span class="nv">laststatus</span><span class="o">=</span><span class="m">2</span>
+
+nmap &lt;Tab&gt; gt
+nmap &lt;S-Tab&gt; gT
+
+autocmd BufNewFile,BufRead *.js setlocal <span class="nv">ft</span><span class="o">=</span>javascript
+autocmd BufNewFile,BufRead *.ejs setlocal <span class="nv">ft</span><span class="o">=</span>html
+autocmd BufNewFile,BufRead *.pug setlocal <span class="nv">ft</span><span class="o">=</span>pug
+autocmd BufNewFile,BufRead *.eex setlocal <span class="nv">ft</span><span class="o">=</span>html
+autocmd BufNewFile,BufRead *.py setlocal <span class="nv">ft</span><span class="o">=</span>python
+autocmd BufNewFile,BufRead *.rb setlocal <span class="nv">ft</span><span class="o">=</span>ruby
+autocmd BufNewFile,BufRead Gemfile setlocal <span class="nv">ft</span><span class="o">=</span>ruby
+autocmd BufNewFile,BufRead *.coffee setlocal <span class="nv">ft</span><span class="o">=</span>coffee
+autocmd BufNewFile,BufRead *.ts setlocal <span class="nv">ft</span><span class="o">=</span>typescript
+autocmd BufNewFile,BufRead *.md setlocal <span class="nv">ft</span><span class="o">=</span>markdown
+autocmd BufNewFile,BufRead *.jade setlocal <span class="nv">ft</span><span class="o">=</span>markdown
+autocmd BufNewFile,BufRead *.gyp setlocal <span class="nv">ft</span><span class="o">=</span>json
+
+<span class="nb">let</span> g:user_emmet_mode <span class="o">=</span> <span class="s1">&#39;iv&#39;</span>
+autocmd FileType html imap &lt;buffer&gt;&lt;expr&gt;&lt;C-E&gt; emmet#isExpandable<span class="o">()</span> ? <span class="s2">&#34;\&lt;plug&gt;(emmet-expand-abbr)&#34;</span> : <span class="s2">&#34;\&lt;C-E&gt;&#34;</span>
+
+<span class="nb">let</span> g:indent_guides_enable_on_vim_startup <span class="o">=</span> <span class="m">1</span></code></pre></div></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="btn" href="#" onclick="history.back();return false;">BACK</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+        <p>Tags</p>
+        
+        <a href="http://kyamawork.info//tags/alpine/">alpine(3)</a>
+        
+        <a href="http://kyamawork.info//tags/centos/">centos(2)</a>
+        
+        <a href="http://kyamawork.info//tags/docker/">docker(6)</a>
+        
+        <a href="http://kyamawork.info//tags/express/">express(1)</a>
+        
+        <a href="http://kyamawork.info//tags/mariadb/">mariadb(1)</a>
+        
+        <a href="http://kyamawork.info//tags/nginx/">nginx(1)</a>
+        
+        <a href="http://kyamawork.info//tags/nodejs/">nodejs(1)</a>
+        
+        <a href="http://kyamawork.info//tags/postgres/">postgres(2)</a>
+        
+        <a href="http://kyamawork.info//tags/python/">python(1)</a>
+        
+        <a href="http://kyamawork.info//tags/vim/">vim(1)</a>
+        
+      </div>
+      <div class="col">
+        <p>Powered by</p>
+        <a href="https://gohugo.io/">[HUGO]</a>
+        <a href="https://ajusa.github.io/lit/">[lit]</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="http://kyamawork.info//js/main.js"></script>
+</body>
+</html>
+
