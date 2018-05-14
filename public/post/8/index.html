@@ -3,7 +3,7 @@
 <head lang="ja">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CentOS7にDockerをインストール</title>
+  <title>Ruby On Railsの環境をDocker(CentOS7)に作る</title>
   <link rel="stylesheet" href="http://kyamawork.info/css/lit.css">
   <link rel="stylesheet" href="http://kyamawork.info/css/syntax.css">
   <link rel="stylesheet" href="http://kyamawork.info/css/main.css">
@@ -41,38 +41,56 @@
   <div class="c">
     <div class="row">
       <div class="col">
-          <h1>CentOS7にDockerをインストール</h1>
-          <p>2018.04.15</p>
+          <h1>Ruby On Railsの環境をDocker(CentOS7)に作る</h1>
+          <p>2018.05.08</p>
           
           <a href="http://kyamawork.info/tags/docker/">[docker]</a>
           
           <a href="http://kyamawork.info/tags/centos/">[centos]</a>
           
+          <a href="http://kyamawork.info/tags/rails/">[rails]</a>
+          
           <p><p></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">su -
 
-<span class="c1"># Uninstall old versions
-</span><span class="c1"></span>yum remove docker docker-common docker-selinux docker-engine
+<p>ホストでコンテナを作成する</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run -dit -p <span class="m">49152</span>:3000 --name rails centos:7
+docker <span class="nb">exec</span> -it rails bash</code></pre></div>
+<p>コンテナでrailsをインストールする</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">yum install -y gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel git bzip2 make ruby-devel libffi-devel sqlite-devel
 
-<span class="c1"># Install
-</span><span class="c1"></span>yum install -y yum-utils device-mapper-persistent-data lvm2
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum-config-manager --enable docker-ce-test
+git clone https://github.com/creationix/nvm.git ~/.nvm
+<span class="nb">source</span> ~/.nvm/nvm.sh
+<span class="nb">echo</span> <span class="s1">&#39;if [[ -s ~/.nvm/nvm.sh ]];&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;    then source ~/.nvm/nvm.sh&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;fi&#39;</span> &gt;&gt; ~/.bash_profile
+nvm ls-remote
+nvm install stable
 
-yum install docker-ce
-<span class="c1"># yum list docker-ce --showduplicates | sort -r
-</span><span class="c1"># e.g   docker-ce.x86_64    17.12.ce-1.el7.centos    docker-ce-stable
-</span><span class="c1"># yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
-</span><span class="c1"></span>systemctl start docker
+git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
+<span class="nb">echo</span> <span class="s1">&#39;export RBENV_ROOT=&#34;/usr/local/rbenv&#34;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;export PATH=&#34;${RBENV_ROOT}/bin:${PATH}&#34;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bash_profile
+<span class="nb">source</span> ~/.bash_profile
+rbenv --version
 
-<span class="c1"># hello world
-</span><span class="c1"></span>su -
-docker run hello-world
+git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
 
-<span class="c1"># Uninstall Docker CE
-</span><span class="c1"></span>su -
-yum remove docker-ce
-rm -rf /var/lib/docker</code></pre></div></p>
+rbenv install -l
+rbenv install -v <span class="m">2</span>.5.0
+rbenv rehash
+rbenv global <span class="m">2</span>.5.0
+ruby -v
+
+gem update --system
+gem install --no-ri --no-rdoc rails
+gem install bundler
+rbenv rehash
+rails -v</code></pre></div>
+<p>サンプルプロジェクトを作ってみる</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">rails new sample
+<span class="nb">cd</span> sample
+rails server</code></pre></div>
+<p>http://{$IP}:49152/ にアクセスし、&rdquo;Yay! You&rsquo;re on Rails!&ldquo;の画面が表示されることを確認する</p></p>
       </div>
     </div>
     <div class="row">

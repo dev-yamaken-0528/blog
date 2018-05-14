@@ -23,7 +23,7 @@
     <item>
       <title>Centos</title>
       <link>http://kyamawork.info/tags/centos/</link>
-      <pubDate>Tue, 17 Apr 2018 14:42:14 +0900</pubDate>
+      <pubDate>Tue, 08 May 2018 18:23:59 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/centos/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>Docker</title>
       <link>http://kyamawork.info/tags/docker/</link>
-      <pubDate>Tue, 08 May 2018 09:49:34 +0900</pubDate>
+      <pubDate>Tue, 08 May 2018 18:23:59 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/docker/</guid>
       <description></description>
@@ -89,6 +89,15 @@
       <pubDate>Tue, 01 May 2018 13:05:20 +0900</pubDate>
       
       <guid>http://kyamawork.info/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>http://kyamawork.info/tags/rails/</link>
+      <pubDate>Tue, 08 May 2018 18:23:59 +0900</pubDate>
+      
+      <guid>http://kyamawork.info/tags/rails/</guid>
       <description></description>
     </item>
     
