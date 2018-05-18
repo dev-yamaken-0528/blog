@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kyamawork.info/post/9/</loc>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kyamawork.info/post/8/</loc>
     <lastmod>2018-05-08T18:23:59+09:00</lastmod>
   </url>
@@ -55,13 +60,13 @@
   
   <url>
     <loc>http://kyamawork.info/tags/centos/</loc>
-    <lastmod>2018-05-08T18:23:59+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://kyamawork.info/tags/docker/</loc>
-    <lastmod>2018-05-08T18:23:59+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,13 +78,13 @@
   
   <url>
     <loc>http://kyamawork.info/tags/mariadb/</loc>
-    <lastmod>2018-05-08T09:49:34+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://kyamawork.info/tags/nginx/</loc>
-    <lastmod>2018-04-17T14:42:14+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,7 +102,7 @@
   
   <url>
     <loc>http://kyamawork.info/post/</loc>
-    <lastmod>2018-05-08T18:23:59+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,8 +131,14 @@
   </url>
   
   <url>
+    <loc>http://kyamawork.info/tags/wordpress/</loc>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://kyamawork.info/</loc>
-    <lastmod>2018-05-08T18:23:59+09:00</lastmod>
+    <lastmod>2018-05-18T13:12:01+09:00</lastmod>
     <priority>0</priority>
   </url>
   

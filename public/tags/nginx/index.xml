@@ -6,10 +6,19 @@
     <description>Recent content in Nginx on 技術ブログとか</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 17 Apr 2018 14:42:14 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 18 May 2018 13:12:01 +0900</lastBuildDate>
     
 	<atom:link href="http://kyamawork.info/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dockerのコンテナ(CentOS7)に Nginx &#43; Wordpress &#43; MariaDB 環境を構築する</title>
+      <link>http://kyamawork.info/post/9/</link>
+      <pubDate>Fri, 18 May 2018 13:12:01 +0900</pubDate>
+      
+      <guid>http://kyamawork.info/post/9/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DockerのCentOS7にNginx、Express、Postgres環境を作る</title>
