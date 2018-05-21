@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DockerのAlpineコンテナにLapis(Lua &#43; OpenResty)環境を構築する</title>
+  <link rel="stylesheet" href="http://kyamawork.info/css/lit.css">
+  <link rel="stylesheet" href="http://kyamawork.info/css/syntax.css">
+  <link rel="stylesheet" href="http://kyamawork.info/css/main.css">
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117981223-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-117981223-1');
+    </script>
+  
+</head>
+<body>
+<header>
+  <div class="c">
+    <div class="row">
+      <div class="card">
+        <a href="http://kyamawork.info">
+        <b>
+          技術ブログとか
+        </b>
+        <span>
+          (自分用のメモであったり、何かしらアップしたり)
+        </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<main>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+          <h1>DockerのAlpineコンテナにLapis(Lua &#43; OpenResty)環境を構築する</h1>
+          <p>2018.05.21</p>
+          
+          <a href="http://kyamawork.info/tags/docker/">[docker]</a>
+          
+          <a href="http://kyamawork.info/tags/alpine/">[alpine]</a>
+          
+          <a href="http://kyamawork.info/tags/lapis/">[lapis]</a>
+          
+          <p><p></p>
+
+<p>lapis lua + nginx</p>
+
+<p><a href="http://leafo.net/lapis/reference.html">http://leafo.net/lapis/reference.html</a>
+<a href="https://luarocks.org/">https://luarocks.org/</a></p>
+
+<p>DockerのAlpineコンテナにLapis(Lua + OpenResty)環境を構築する</p>
+
+<p>ホストでコンテナを作成し、アクセスする</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run -dit -p <span class="m">49155</span>:80 --name lapis alpine:latest
+docker <span class="nb">exec</span> -it lapis ash</code></pre></div>
+<p>コンテナで実施</p>
+
+<p>パッケージの更新と、必須パッケージインストール</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apk update
+apk add lua lua5.1-dev wget make autoconf gcc musl-dev openssl-dev git pcre-dev curl</code></pre></div>
+<p>LuaRocksをインストールする</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget https://luarocks.org/releases/luarocks-2.4.4.tar.gz
+tar zxpf luarocks-2.4.4.tar.gz
+<span class="nb">cd</span> luarocks-2.4.4
+./configure<span class="p">;</span> make bootstrap</code></pre></div>
+<p>OpenRestyをインストールする</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">※https://openresty.org/en/download.html から最新バージョンを確認
+wget https://openresty.org/download/openresty-1.13.6.2.tar.gz
+tar -xvf openresty-1.13.6.2.tar.gz
+<span class="nb">cd</span> openresty-1.13.6.2/
+./configure -j2
+make -j2
+make install</code></pre></div>
+<p>Lapisをインストールする</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">luarocks install lapis</code></pre></div>
+<p>サンプルアプリの作成と起動</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir sample <span class="o">&amp;&amp;</span> <span class="nb">cd</span> sample
+lapis new --lua
+touch config.lua
+vi config.lua
+...
+<span class="nb">local</span> <span class="nv">config</span> <span class="o">=</span> require<span class="o">(</span><span class="s2">&#34;lapis.config&#34;</span><span class="o">)</span>
+config<span class="o">(</span><span class="s2">&#34;development&#34;</span>, <span class="o">{</span>
+  <span class="nv">port</span> <span class="o">=</span> <span class="m">80</span>
+<span class="o">})</span>
+...
+
+lapis server</code></pre></div>
+<p>以下にアクセスし、&rdquo;Welcome to Lapis 1.7.0&rdquo;と表示されていればOK</p>
+
+<pre><code>http://{ホストのIP}:49155/
+</code></pre>
+
+<p>以前(2年くらい前?)に構築した時より、かなり楽にインストールできるようになっていました</p>
+
+<p>各公式サイト
+Lapis(<a href="http://leafo.net/lapis/">http://leafo.net/lapis/</a>)
+LuaRocks(<a href="https://luarocks.org/">https://luarocks.org/</a>)
+OpenResty(<a href="https://openresty.org/en/">https://openresty.org/en/</a>)</p></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a class="btn" href="#" onclick="history.back();return false;">BACK</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="c">
+    <div class="row">
+      <div class="col">
+        <p>Tags</p>
+        
+        <a href="http://kyamawork.info/tags/alpine/">alpine(4)</a>
+        
+        <a href="http://kyamawork.info/tags/centos/">centos(4)</a>
+        
+        <a href="http://kyamawork.info/tags/docker/">docker(9)</a>
+        
+        <a href="http://kyamawork.info/tags/express/">express(1)</a>
+        
+        <a href="http://kyamawork.info/tags/lapis/">lapis(1)</a>
+        
+        <a href="http://kyamawork.info/tags/mariadb/">mariadb(2)</a>
+        
+        <a href="http://kyamawork.info/tags/nginx/">nginx(2)</a>
+        
+        <a href="http://kyamawork.info/tags/nodejs/">nodejs(1)</a>
+        
+        <a href="http://kyamawork.info/tags/postgres/">postgres(2)</a>
+        
+        <a href="http://kyamawork.info/tags/python/">python(1)</a>
+        
+        <a href="http://kyamawork.info/tags/rails/">rails(1)</a>
+        
+        <a href="http://kyamawork.info/tags/vim/">vim(1)</a>
+        
+        <a href="http://kyamawork.info/tags/wordpress/">wordpress(1)</a>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Powered by</p>
+        <a href="https://gohugo.io/">[HUGO]</a>
+        <a href="https://ajusa.github.io/lit/">[lit]</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="http://kyamawork.info/js/main.js"></script>
+</body>
+</html>
+
