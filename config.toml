@@ -1,6 +1,6 @@
 baseURL = "http://kyamawork.info"
 languageCode = "ja"
-title = "技術ブログとか"
+title = "きゃまメモ"
 
 pygmentsCodefences = true
 pygmentsUseClasses = true
