@@ -6,10 +6,19 @@
     <description>Recent content on きゃまメモ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 21 May 2018 12:21:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 12:27:46 +0900</lastBuildDate>
     
 	<atom:link href="http://kyamawork.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NERDTreeの矢印が文字化けした時の対処</title>
+      <link>http://kyamawork.info/post/0011/</link>
+      <pubDate>Tue, 22 May 2018 12:27:46 +0900</pubDate>
+      
+      <guid>http://kyamawork.info/post/0011/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DockerのAlpineコンテナにLapis(Lua &#43; OpenResty)環境を構築する</title>

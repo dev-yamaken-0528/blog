@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://kyamawork.info/post/0011/</loc>
+    <lastmod>2018-05-22T12:27:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://kyamawork.info/post/0010/</loc>
     <lastmod>2018-05-21T12:21:31+09:00</lastmod>
   </url>
@@ -113,7 +118,7 @@
   
   <url>
     <loc>http://kyamawork.info/post/</loc>
-    <lastmod>2018-05-21T12:21:31+09:00</lastmod>
+    <lastmod>2018-05-22T12:27:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +142,7 @@
   
   <url>
     <loc>http://kyamawork.info/tags/vim/</loc>
-    <lastmod>2018-04-16T10:13:41+09:00</lastmod>
+    <lastmod>2018-05-22T12:27:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,7 +154,7 @@
   
   <url>
     <loc>http://kyamawork.info/</loc>
-    <lastmod>2018-05-21T12:21:31+09:00</lastmod>
+    <lastmod>2018-05-22T12:27:46+09:00</lastmod>
     <priority>0</priority>
   </url>
   
