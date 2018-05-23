@@ -2,9 +2,39 @@ baseURL = "http://kyamawork.info"
 languageCode = "ja"
 title = "きゃまメモ"
 
+googleAnalytics = "UA-117981223-1"
+
 pygmentsCodefences = true
 pygmentsUseClasses = true
 
-[taxonomies]
-  tag = "tags"
-  category = "categories"
+canonifyurls = true
+paginate = 10
+
+[author]
+  name = "kyama"
+
+[params]
+  DateForm = "2006.01.02"
+  Description = "(自分用のメモであったり、何かしらアップしたり)"
+  Author = "kyama"
+  email = "dev.yamaken.0528@gmail.com "
+  postSummariesFrontPage = 5
+  showReadTime = false
+
+[[params.social]]
+  title = "twitter"
+  url = "https://twitter.com/kyama_0528"
+
+[[menu.main]]
+  name = "home"
+  url = "/"
+  weight = -200
+[[menu.main]]
+  name = "Post"
+  url = "/post/"
+  weight = -180
+[[menu.main]]
+  name = "Tags"
+  url = "/tags"
+  weight = -160
+
