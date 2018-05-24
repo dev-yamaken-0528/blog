@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
-  <header>
-    <div>
+  <header class="row">
+    <div class="coll">
       <h1>{{ .Title }}</h1>
       <span>{{ .Title }}</span>
     </div>
   </header>
-  <div>
+  <div class="row">
     <ul>
       {{ $data := .Data }}
       {{ range $key, $value := .Data.Terms.ByCount }}

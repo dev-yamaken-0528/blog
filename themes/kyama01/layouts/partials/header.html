@@ -7,14 +7,15 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ end }}">
   <meta name="author" content="{{ if .Params.authors }}{{ .Params.authors }}{{ else if .Site.Params.Author }}{{.Site.Params.Author}}{{ end }}">
   <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ end }}">
+  <link href="{{ .Site.BaseURL }}/css/lit.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}/css/syntax.css" rel="stylesheet">
   <title>{{ .Title }} - {{ .Site.Title }}</title>
 </head>
-<body>
-  <nav>
-    <div>
-      <div>
-        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-      </div>
-      {{ partial "navbar.html" . }}
+<body class="c">
+  <div class="row">
+    <div class="card">
+      <b class="col"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></b>
+      {{ range .Site.Menus.main }}
+      <div class="col"><a href="{{ .URL }}">{{ .Name }}</a></div>
+      {{end}}
     </div>
-  </nav>

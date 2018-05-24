@@ -25,15 +25,11 @@ paginate = 10
   url = "https://twitter.com/kyama_0528"
 
 [[menu.main]]
-  name = "home"
-  url = "/"
-  weight = -200
-[[menu.main]]
   name = "Post"
   url = "/post/"
-  weight = -180
+  weight = -200
 [[menu.main]]
   name = "Tags"
   url = "/tags"
-  weight = -160
+  weight = -180
 

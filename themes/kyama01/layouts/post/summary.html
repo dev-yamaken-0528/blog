@@ -1,9 +1,9 @@
-  <div class="post-preview">
+  <div class="card">
     <a href="{{ .Permalink }}">
-      <h2 class="post-title">{{ .Title }}</h2>
-      <h3 class="post-subtitle">{{ .Description }}</h3>
+      <p>{{ .Title }}</p>
+      <p>{{ .Description }}</p>
     </a>
-    <p class="post-meta">
+    <p>
       {{ partial "meta.html" .}}
     </p>
   </div>

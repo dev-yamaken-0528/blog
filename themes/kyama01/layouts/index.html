@@ -1,19 +1,17 @@
 {{ partial "header.html" . }}
-  <header>
-    <div>
+  <header class="row">
+    <div class="col">
       <h1>{{ .Site.Title }}</h1>
       {{ with .Site.Params.Description }}<span>{{ . }}</span>{{ end }}
     </div>
   </header>
-  <div>
+  <div class="row">
     {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
     {{ range first $posts (where .Data.Pages "Type" "post") }}
         {{ .Render "summary"}}
     {{ end }}
-    <ul>
-      <li>
-        <a href="{{ .Site.BaseURL }}/post/">Older Posts &rarr;</a>
-      </li>
-    </ul>
+  </div>
+  <div class="row">
+    <a class="btn" href="{{ .Site.BaseURL }}/post/">Older Posts &rarr;</a>
   </div>
 {{ partial "footer.html" . }}

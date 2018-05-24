@@ -1,24 +1,25 @@
-  <footer>
-    <div>
-      <ul>
-        {{ with .Site.Params.email }}
-          <li>
-            <a href="mailto:{{ . }}">mail</a>
-          </li>
-        {{ end }}
-        {{ if isset .Site.Params "social" }}
-        {{ range .Site.Params.social }}
-        <li>
-          <a href="{{ .url }}">
-            {{ .title }}
-          </a>
-        </li>
-        {{ end }}
-        {{ end }}
-      </ul>
-      <p>{{ .Site.Copyright }}</p>
-    </div>
-  </footer>
-  {{ template "_internal/google_analytics.html" . }}
+    <footer>
+      <div class="row">
+        <div class="col">
+          <p>Contact</p>
+          {{ with .Site.Params.email }}
+            [<a href="mailto:{{ . }}">mail</a>]
+          {{ end }}
+          {{ if isset .Site.Params "social" }}
+          {{ range .Site.Params.social }}
+            [<a href="{{ .url }}">{{ .title }}</a>]
+          {{ end }}
+          {{ end }}
+          <p>{{ .Site.Copyright }}</p>
+        </div>
+        <div class="col">
+        <p>Powerd By</p>
+        [<a href="https://gohugo.io/">HUGO</a>]
+        [<a href="https://ajusa.github.io/lit/">lit</a>]
+        </div>
+      </div>
+    </footer>
+    {{ template "_internal/google_analytics.html" . }}
+  </div>
 </body>
 </html>
