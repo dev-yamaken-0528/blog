@@ -1,0 +1,6 @@
+<div>
+  <p><a href="{{ .Permalink }}">{{ .Title }}</a> on {{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}
+    {{ partial "categories.html" .}}
+    {{ partial "tags.html" .}}
+  </p>
+</div>
