@@ -10,8 +10,8 @@
     {{ range .Paginator.Pages }}
       {{ .Render "archive" }}
     {{ end }}
-    <div class="card">
-      {{ template "_internal/pagination.html" . }}
-    </div>
+  </div>
+  <div class="row">
+    {{ template "_internal/pagination.html" . }}
   </div>
 {{ partial "footer.html" . }}
