@@ -1,5 +1,13 @@
     <footer>
       <div class="row">
+        <div class="card">
+          <b class="col"><a href="{{ .Site.BaseURL }}">HOME</a></b>
+          {{ range .Site.Menus.main }}
+          <div class="col"><a href="{{ .URL }}">{{ .Name }}</a></div>
+          {{end}}
+        </div>
+      </div>
+      <div class="row">
         <div class="col">
           <p>Contact</p>
           {{ with .Site.Params.email }}
@@ -13,9 +21,9 @@
           <p>{{ .Site.Copyright }}</p>
         </div>
         <div class="col">
-        <p>Powered By</p>
-        [<a href="https://gohugo.io/">HUGO</a>]
-        [<a href="https://ajusa.github.io/lit/">lit</a>]
+          <p>Powered By</p>
+          [<a href="https://gohugo.io/">HUGO</a>]
+          [<a href="https://ajusa.github.io/lit/">lit</a>]
         </div>
       </div>
     </footer>

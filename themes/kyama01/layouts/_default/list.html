@@ -1,14 +1,17 @@
 {{ partial "header.html" . }}
+  <hr>
   <header class="row">
     <div class="col">
       <h1>{{ .Title }}</h1>
-      <span>{{ .Description }}</span>
     </div>
   </header>
+  <hr>
   <div class="row">
     {{ range .Paginator.Pages }}
       {{ .Render "archive" }}
     {{ end }}
-    {{ template "_internal/pagination.html" . }}
+    <div class="card">
+      {{ template "_internal/pagination.html" . }}
+    </div>
   </div>
 {{ partial "footer.html" . }}

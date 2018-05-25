@@ -1,6 +1,6 @@
 {{ partial "header.html" .}}
-  <header>
-    <div>
+  <header class="row">
+    <div class="col">
       <h1>{{ .Title }}</h1>
       <h2>{{ .Description }}</h2>
       <span>
@@ -8,8 +8,8 @@
       </span>
     </div>
   </header>
-  <article>
-    <div>
+  <article class="row">
+    <div class="col">
       {{ .Content }}
     </div>
   </article>

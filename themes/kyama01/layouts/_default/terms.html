@@ -1,16 +1,15 @@
 {{ partial "header.html" . }}
+  <hr>
   <header class="row">
-    <div class="coll">
+    <div class="col">
       <h1>{{ .Title }}</h1>
-      <span>{{ .Title }}</span>
     </div>
   </header>
+  <hr>
   <div class="row">
-    <ul>
       {{ $data := .Data }}
       {{ range $key, $value := .Data.Terms.ByCount }}
-      <li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name | title }}</a> {{ $value.Count }}</li>
+      <p>[<a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name | title }}</a>]({{ $value.Count }})</p>
       {{ end }}
-    </ul>
   </div>
 {{ partial "footer.html" . }}
