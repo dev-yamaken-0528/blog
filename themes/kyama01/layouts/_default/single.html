@@ -1,0 +1,18 @@
+{{ partial "header.html" .}}
+  <hr>
+  <header class="row">
+    <div class="col">
+      <h1>{{ .Title }}</h1>
+      <h2>{{ .Description }}</h2>
+      <span>
+        {{ partial "meta.html" .}}
+      </span>
+    </div>
+  </header>
+  <hr>
+  <article class="row">
+    <div class="col">
+      {{ .Content }}
+    </div>
+  </article>
+{{ partial "footer.html" .}}

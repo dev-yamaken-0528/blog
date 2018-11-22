@@ -32,4 +32,7 @@ paginate = 10
   name = "Tags"
   url = "/tags"
   weight = -180
-
+[[menu.main]]
+  name = "Profile"
+  url = "/pages/profile/"
+  weight = -160
