@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+  <h1>{{ .Site.Title }}</h1>
+  {{ with .Site.Params.Description }}<span>{{ . }}</span>{{ end }}
+  {{ $posts := or .Site.Params.PostSummariesFrontPage 10 }}
+  {{ range first $posts (where .Data.Pages "Type" "post") }}
+    <a href="{{ .Permalink }}">
+      <p>{{ .Title }}</p>
+      <p>{{ .Description }}</p>
+    </a>
+    {{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}
+      {{ range $index, $c :=  .Params.categories }}
+        [<a href="/categories/{{ urlize . }}">{{ title . }}</a>]
+      {{ end }}
+      {{ range $index, $tag :=  .Params.tags }}
+        [<a href="/tags/{{ urlize . }}">{{ lower . }}</a>]
+      {{ end }}
+  {{ end }}
+{{ partial "footer.html" . }}

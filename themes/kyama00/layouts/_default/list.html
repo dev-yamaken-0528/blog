@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ range .Paginator.Pages }}
+    <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+    {{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}
+    {{ range $index, $c :=  .Params.categories }}
+      <a href="/categories/{{ urlize . }}">{{ title . }}</a>
+    {{ end }}
+    {{ range $index, $tag :=  .Params.tags }}
+      <a href="/tags/{{ urlize . }}">{{ lower . }}</a>
+    {{ end }}
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+{{ partial "footer.html" . }}

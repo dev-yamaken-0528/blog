@@ -1,0 +1,21 @@
+  <footer>
+    <a href="{{ .Site.BaseURL }}">HOME</a>
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{end}}
+    <p>Contact</p>
+    {{ with .Site.Params.email }}
+      [<a href="mailto:{{ . }}">mail</a>]
+    {{ end }}
+    {{ if isset .Site.Params "social" }}
+    {{ range .Site.Params.social }}
+      [<a href="{{ .url }}">{{ .title }}</a>]
+    {{ end }}
+    {{ end }}
+    <p>{{ .Site.Copyright }}</p>
+    <p>Powered By</p>
+    [<a href="https://gohugo.io/">HUGO</a>]
+  </footer>
+</body>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/js/script.js"></script>
+</html>
