@@ -1,0 +1,115 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  background-color: #EAEAE0;
+  color: #00336D;
+}
+
+h1, h2 {
+  text-align: center;
+} 
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.pagination {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+li {
+  display: inline;
+  border-radius: 3px;
+  color: white;
+  background-color: gray;
+  padding: 5px;
+  margin: 10px;
+}
+
+.container {
+  flex: 1;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  background-color: #414141;
+  padding: 10px 10px 10px 10px;
+}
+
+.footer {
+  color: white;
+  background-color: #414141;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 40%;
+  border: solid 1px gray;
+  margin: 10px;
+  padding: 5px;
+}
+.card:hover {
+  box-shadow: 0 0 8px gray;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #00336D;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 80%;
+  border-radius: 3px;
+  color: white;
+  background-color: gray;
+  padding: 2px;
+  margin: 2px;
+}
+.badge:hover {
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 2px gray;
+}
+
+.article-date {
+  text-align: center;
+}
+
+.article-tags {
+  text-align: center;
+}
+
+article {
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  overflow: auto;
+  background-color: #444444;
+  color: white;
+}

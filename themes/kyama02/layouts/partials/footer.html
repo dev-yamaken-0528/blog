@@ -1,0 +1,38 @@
+</div>
+<footer class="footer">
+  <div>
+    <h2>Tags</h2>
+    <div>
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <a href="/tags/{{ $name }}"><span class="badge">{{ $name }}({{ $taxonomy.Count }})</span></a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div>
+    <h2>Menus</h2>
+    <div>
+      <a href="{{ .Site.BaseURL }}"><span class="badge">HOME</span></a>
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}"><span class="badge">{{ .Name }}</span></a>
+      {{end}}
+    </div>
+  </div>
+
+  <p>Contact</p>
+  {{ with .Site.Params.email }}
+    <a href="mailto:{{ . }}"><span class="badge">mail</span></a>
+  {{ end }}
+  {{ if isset .Site.Params "social" }}
+  {{ range .Site.Params.social }}
+    <a href="{{ .url }}"><span class="badge">{{ .title }}</span></a>
+  {{ end }}
+  {{ end }}
+  <p>{{ .Site.Copyright }}</p>
+  <p>Powered By</p>
+  <a href="https://gohugo.io/"><span class="badge">HUGO</span></a>
+</footer>
+
+</body>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/js/script.js"></script>
+</html>

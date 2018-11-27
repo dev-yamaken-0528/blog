@@ -1,0 +1,21 @@
+{{ partial "header.html" .}}
+  <h1>{{ .Title }}</h1>
+  <h2>{{ .Description }}</h2>
+
+  <div class="article-date">
+    {{ dateFormat (.Site.Params.DateForm | default "Mon, Jan 2, 2006") .Date }}
+  </div>
+  <div class="article-tags">
+    {{ range $index, $c :=  .Params.categories }}
+      <a href="/categories/{{ urlize . }}"><span class="badge">{{ title . }}</span></a>
+    {{ end }}
+    {{ range $index, $tag :=  .Params.tags }}
+      <a href="/tags/{{ urlize . }}"><span class="badge">{{ lower . }}</span></a>
+    {{ end }}
+  </div>
+
+  <article>
+    {{ .Content }}
+  </article>
+
+{{ partial "footer.html" .}}
