@@ -109,7 +109,9 @@ li {
 article {
   margin: 20px 20px 20px 20px;
   padding: 20px 20px 20px 20px;
-  overflow: auto;
-  background-color: #444444;
-  color: white;
+}
+
+pre {
+  white-space: pre-wrap;
+  padding: 10px;
 }

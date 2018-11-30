@@ -8,6 +8,7 @@
   <meta name="author" content="{{ if .Params.authors }}{{ .Params.authors }}{{ else if .Site.Params.Author }}{{.Site.Params.Author}}{{ end }}">
   <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ end }}">
   <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}/css/syntax.css" rel="stylesheet">
   <title>{{ .Title }} - {{ .Site.Title }}</title>
   {{ template "_internal/google_analytics.html" . }}
 </head>
